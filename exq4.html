@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Arrays;
+        import java.util.List;
+        
+        public class PositiveNumberException {
+            public static void main(String[] args) {
+                try {
+                    checkPositiveNumbers(Arrays.asList(-1, -2, 3));
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void checkPositiveNumbers(List<Integer> numbers) throws Exception {
+                for (int number : numbers) {
+                    if (number > 0) {
+                        throw new Exception("List contains positive numbers.");
+                    }
+                }
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: List contains positive numbers.
+    
+    </body> 
+</html> 

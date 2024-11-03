@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class CountVowels {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if ("AEIOUaeiou".indexOf(c) != -1) {
+                count++;
+            }
+        }
+        System.out.println("Number of vowels: " + count);
+    }
+}
+
+    </pre> 
+ 
+    </body> 
+</html> 

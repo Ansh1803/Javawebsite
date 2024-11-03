@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.io.File;
+
+        public class FileNotFoundExample {
+            public static void main(String[] args) {
+                try {
+                    readFile("nonexistent.txt");
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void readFile(String fileName) throws Exception {
+                File file = new File(fileName);
+                if (!file.exists()) {
+                    throw new Exception("File not found.");
+                }
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: File not found.
+    
+    </body> 
+</html> 

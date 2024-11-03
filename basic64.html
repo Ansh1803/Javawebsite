@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class CountDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a positive integer:");
+        int num = scanner.nextInt();
+        int count = 0;
+        while (num > 0) {
+            num /= 10;
+            count++;
+        }
+        System.out.println("Number of digits: " + count);
+    }
+}
+
+    </pre> 
+  
+    </body> 
+</html> 

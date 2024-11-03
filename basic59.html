@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class VowelOrConsonant {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a character:");
+        char ch = scanner.next().charAt(0);
+        if ("AEIOUaeiou".indexOf(ch) != -1) {
+            System.out.println(ch + " is a vowel.");
+        } else {
+            System.out.println(ch + " is a consonant.");
+        }
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

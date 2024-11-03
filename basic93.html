@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class SmallestPrime {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int n = scanner.nextInt();
+        int nextPrime = n + 1;
+        while (true) {
+            if (isPrime(nextPrime)) {
+                System.out.println("Smallest prime greater than " + n + " is " + nextPrime);
+                break;
+            }
+            nextPrime++;
+        }
+    }
+
+    private static boolean isPrime(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
+        }
+        return true;
+    }
+}
+
+    </pre> 
+   
+    </body> 
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class VowelException {
+            public static void main(String[] args) {
+                try {
+                    checkVowels("sky");
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void checkVowels(String str) throws Exception {
+                if (!str.matches(".*[aeiou].*")) {
+                    throw new Exception("String does not contain vowels.");
+                }
+            }
+        }
+        
+       
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: String does not contain vowels.
+    
+    </body> 
+</html> 

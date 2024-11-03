@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class OrderCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter three numbers:");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        int c = scanner.nextInt();
+        if (a < b && b < c) {
+            System.out.println("Numbers are in increasing order.");
+        } else if (a > b && b > c) {
+            System.out.println("Numbers are in decreasing order.");
+        } else {
+            System.out.println("Numbers are neither in increasing nor decreasing order.");
+        }
+    }
+}
+
+    </pre> 
+ 
+    </body> 
+</html> 

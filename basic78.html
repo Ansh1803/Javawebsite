@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class ReplaceWord {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        System.out.println("Enter word to replace:");
+        String wordToReplace = scanner.nextLine();
+        System.out.println("Enter replacement word:");
+        String replacementWord = scanner.nextLine();
+        String result = str.replace(wordToReplace, replacementWord);
+        System.out.println("Updated string: " + result);
+    }
+}
+
+    </pre> 
+  
+    </body> 
+</html> 

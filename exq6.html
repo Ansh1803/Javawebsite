@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.HashSet;
+        import java.util.Set;
+        
+        public class DuplicateNumberException {
+            public static void main(String[] args) {
+                try {
+                    checkDuplicates(new int[]{1, 2, 3, 2});
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void checkDuplicates(int[] numbers) throws Exception {
+                Set<Integer> seen = new HashSet<>();
+                for (int number : numbers) {
+                    if (!seen.add(number)) {
+                        throw new Exception("Duplicate number found: " + number);
+                    }
+                }
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: Duplicate number found: 2
+    
+    </body> 
+</html> 

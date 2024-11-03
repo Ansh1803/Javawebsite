@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class ExceptionExample {
+            public static void main(String[] args) {
+                try {
+                    int result = divide(10, 0);
+                    System.out.println("Result: " + result);
+                } catch (ArithmeticException e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static int divide(int a, int b) {
+                return a / b;
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception
+    
+    </body> 
+</html> 

@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class SubstringExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String str = scanner.nextLine();
+        System.out.println("Enter start index:");
+        int startIndex = scanner.nextInt();
+        System.out.println("Enter end index:");
+        int endIndex = scanner.nextInt();
+        String substring = str.substring(startIndex, endIndex);
+        System.out.println("Substring: " + substring);
+    }
+}
+
+    </pre> 
+   
+    </body> 
+</html> 

@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class OddNumberException {
+            public static void main(String[] args) {
+                try {
+                    checkEven(3);
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void checkEven(int number) throws Exception {
+                if (number % 2 != 0) {
+                    throw new Exception("Number is odd.");
+                }
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: Number is odd.
+    
+    </body> 
+</html> 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.io.File;
+
+        public class EmptyFileException {
+            public static void main(String[] args) {
+                try {
+                    checkFileEmpty("empty.txt");
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void checkFileEmpty(String fileName) throws Exception {
+                File file = new File(fileName);
+                if (file.length() == 0) {
+                    throw new Exception("File is empty.");
+                }
+            }
+        }
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: File is empty.
+    </body> 
+</html> 

@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class OddNaturalNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter N:");
+        int N = scanner.nextInt();
+        int sum = 0;
+        System.out.println("Odd natural numbers:");
+        for (int i = 1; i <= N; i++) {
+            int oddNum = 2 * i - 1;
+            System.out.print(oddNum + " ");
+            sum += oddNum;
+        }
+        System.out.println("\nSum of odd natural numbers: " + sum);
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 
