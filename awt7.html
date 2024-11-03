@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.awt.*;
+import java.awt.event.*;
+
+ class CheckApp {
+    public static void main(String[] args) {
+        Frame frame = new Frame("Checkbox AWT Application");
+        frame.setLayout(new FlowLayout());
+
+        final Checkbox checkbox = new Checkbox("Accept Terms and Conditions");
+        Button button = new Button("Submit");
+
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (checkbox.getState()) {
+                    System.out.println("Checkbox is checked.");
+                } else {
+                    System.out.println("Checkbox is unchecked.");
+                }
+            }
+        });
+
+        frame.add(checkbox);
+        frame.add(button);
+
+        frame.setSize(300, 100);
+        
+
+        frame.setVisible(true);
+    }
+}
+
+    
+    </pre>
+    <img src="awt7.png" alt="">
+</body>
+</html>

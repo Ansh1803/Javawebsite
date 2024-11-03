@@ -1,0 +1,60 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        public class MatrixEquality {
+            public static void main(String[] args) {
+                int[][] matrixA = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+        
+                int[][] matrixB = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+        
+                boolean areEqual = areMatricesEqual(matrixA, matrixB);
+                
+                if (areEqual) {
+                    System.out.println("The matrices are equal.");
+                } else {
+                    System.out.println("The matrices are not equal.");
+                }
+            }
+        
+            public static boolean areMatricesEqual(int[][] matrixA, int[][] matrixB) {
+                if (matrixA.length != matrixB.length || matrixA[0].length != matrixB[0].length) {
+                    return false;
+                }
+        
+                for (int i = 0; i < matrixA.length; i++) {
+                    for (int j = 0; j < matrixA[i].length; j++) {
+                        if (matrixA[i][j] != matrixB[i][j]) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+        
+    </pre>
+</body>
+</html>

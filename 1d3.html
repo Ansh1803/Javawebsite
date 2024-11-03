@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class Left {
+            public static void main(String[] args) {
+                
+                int[] array = {1, 2, 3, 4, 5};
+                int d = 2;
+        
+                
+                leftRotate(array, d);
+        
+                
+                System.out.println("Rotated Array:");
+                for (int num : array) {
+                    System.out.print(num + " ");
+                }
+            }
+        
+            public static void leftRotate(int[] array, int d) {
+                int n = array.length;
+               
+                d = d % n; 
+        
+                
+                int[] temp = new int[n];
+        
+                
+                for (int i = 0; i < n; i++) {
+                    temp[i] = array[(i + d) % n];
+                }
+        
+               
+                for (int i = 0; i < n; i++) {
+                    array[i] = temp[i];
+                }
+            }
+        }
+        
+    </pre>
+    <img src="out1d3.png" alt="">
+</body>
+</html>

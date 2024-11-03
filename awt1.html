@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+
+      import java.awt.*;
+import java.awt.event.*;
+
+ class App {
+    public static void main(String[] args) {
+       
+        Frame frame = new Frame("Simple AWT Application");
+
+               frame.setLayout(new FlowLayout());
+
+       
+        Button button = new Button("Click Me");
+
+               button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Button Clicked!");
+            }
+        });
+
+               frame.add(button);
+
+       
+        frame.setSize(300, 200);
+        
+        
+        
+        frame.setVisible(true);
+    }
+}
+  
+    
+    </pre>
+    <img src="awt1.png" alt="">
+</body>
+</html>

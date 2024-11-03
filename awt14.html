@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.awt.*;
+import java.awt.event.*;
+
+class ListApp {
+    public static void main(String[] args) {
+        final Frame frame = new Frame("List AWT Application");
+        frame.setLayout(new FlowLayout());
+
+        Label label = new Label("Select an option:");
+        final List list = new List(3);
+
+        list.add("Option 1");
+        list.add("Option 2");
+        list.add("Option 3");
+        list.add("Option 4");
+        list.add("Option 5");
+
+        Button button = new Button("Show Selection");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String[] selectedItems = list.getSelectedItems();
+                if (selectedItems.length > 0) {
+                    StringBuilder selected = new StringBuilder();
+                    for (String item : selectedItems) {
+                        selected.append(item).append(", ");
+                    }
+                    // Remove the last comma and space
+                    if (selected.length() > 0) {
+                        selected.setLength(selected.length() - 2);
+                    }
+                    System.out.println("Selected: " + selected.toString());
+                } else {
+                    System.out.println("No option selected.");
+                }
+            }
+        });
+        frame.setVisible(true);
+    }
+}
+    
+    </pre>
+    <img src="" alt="">
+</body>
+</html>

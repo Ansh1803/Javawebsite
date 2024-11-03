@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.awt.*;
+import java.awt.event.*;
+
+class qApp {
+    public static void main(String[] args) {
+        final Frame frame = new Frame("Custom Checkbox Group AWT Application");
+        frame.setLayout(new GridLayout(3, 1));
+
+        Label label = new Label("Select an option:", Label.CENTER);
+        final CheckboxGroup group = new CheckboxGroup();
+
+        Checkbox checkbox1 = new Checkbox("Option 1", group, false);
+        Checkbox checkbox2 = new Checkbox("Option 2", group, false);
+        Checkbox checkbox3 = new Checkbox("Option 3", group, false);
+
+        Button button = new Button("Show Selection");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Checkbox selected = group.getSelectedCheckbox();
+                if (selected != null) {
+                    System.out.println("Selected: " + selected.getLabel());
+                } else {
+                    System.out.println("No option selected.");
+                }
+            }
+        });
+
+        frame.add(label);
+        frame.add(checkbox1);
+        frame.add(checkbox2);
+        frame.add(checkbox3);
+        frame.add(button);
+
+        frame.setSize(300, 200);
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+
+        frame.setVisible(true);
+    }
+}
+
+    
+    </pre>
+    <img src="awt13.png" alt="">
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.awt.*;
+
+
+ class BApp {
+    public static void main(String[] args) {
+        Frame frame = new Frame("BorderLayout AWT Application");
+        frame.setLayout(new BorderLayout());
+
+        Button northButton = new Button("North");
+        Button eastButton = new Button("East");
+        Button westButton = new Button("West");
+        Button southButton = new Button("South");
+        Button centerButton = new Button("Center");
+
+
+        frame.add(northButton, BorderLayout.NORTH);
+        frame.add(eastButton, BorderLayout.EAST);
+        frame.add(westButton, BorderLayout.WEST);
+        frame.add(southButton, BorderLayout.SOUTH);
+        frame.add(centerButton, BorderLayout.CENTER);
+
+        frame.setSize(400, 300);
+        
+
+        frame.setVisible(true);
+    }
+}
+
+    
+    </pre>
+    <img src="awt4.pngs" alt="">
+</body>
+</html>

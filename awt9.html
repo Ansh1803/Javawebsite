@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.awt.*;
+import java.awt.event.*;
+
+class tApp {
+    public static void main(String[] args) {
+        final Frame frame = new Frame("Custom Layout AWT Application");
+        frame.setLayout(new GridLayout(2, 1));
+
+        Label label = new Label("This is a custom layout label.", Label.CENTER);
+        label.setFont(new Font("Arial", Font.BOLD, 16));
+
+        Button button = new Button("Close");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+            }
+        });
+
+        frame.add(label);
+        frame.add(button);
+
+        frame.setSize(400, 200);
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+
+        frame.setVisible(true);
+    }
+}
+
+    
+    </pre>
+    <img src="awt9.pngs" alt="">
+</body>
+</html>

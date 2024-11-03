@@ -1,0 +1,52 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class SparseMatrixCheck {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {0, 0, 3},
+                    {0, 0, 0},
+                    {5, 0, 0}
+                };
+        
+                if (isSparseMatrix(matrix)) {
+                    System.out.println("The given matrix is a sparse matrix.");
+                } else {
+                    System.out.println("The given matrix is not a sparse matrix.");
+                }
+            }
+        
+            public static boolean isSparseMatrix(int[][] matrix) {
+                int count = 0;
+                int totalElements = matrix.length * matrix[0].length;
+        
+                for (int[] row : matrix) {
+                    for (int num : row) {
+                        if (num == 0) {
+                            count++;
+                        }
+                    }
+                }
+        
+                return count > totalElements / 2;
+            }
+        }
+        
+    </pre>
+</body>
+</html>

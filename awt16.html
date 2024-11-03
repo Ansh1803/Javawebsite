@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        
+        import java.awt.*;
+        import java.awt.event.*;
+        
+        class TextApp {
+            public static void main(String[] args) {
+                final Frame frame = new Frame("TextArea AWT Application");
+                frame.setLayout(new FlowLayout());
+        
+                Label label = new Label("Enter text:");
+                final TextArea textArea = new TextArea(5, 30); 
+        
+                Button button = new Button("Show Text");
+                button.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        String text = textArea.getText();
+                        System.out.println("Entered Text: " + text);
+                    }
+                });
+        
+                frame.add(label);
+                frame.add(textArea);
+                frame.add(button);
+        
+                frame.setSize(400, 200);
+                
+        
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre>
+    <img src="awt16.png" alt="">
+</body>
+</html>

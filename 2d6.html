@@ -1,0 +1,43 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        public class LowerTriangularMatrix {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}
+                };
+        
+                System.out.println("The lower triangular matrix is:");
+                for (int i = 0; i < matrix.length; i++) {
+                    for (int j = 0; j < matrix[i].length; j++) {
+                        if (i >= j) {
+                            System.out.print(matrix[i][j] + " ");
+                        } else {
+                            System.out.print("0 ");
+                        }
+                    }
+                    System.out.println();
+                }
+            }
+        }
+        
+    </pre>
+</body>
+</html>

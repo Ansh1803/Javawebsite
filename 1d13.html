@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class y {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5};
+                int k = 2; 
+                int n = array.length;
+                
+                
+                k = k % n;
+        
+         
+                int[] rotatedArray = new int[n];
+        
+                for (int i = 0; i < n; i++) {
+                    rotatedArray[(i + k) % n] = array[i];
+                }
+        
+              
+                for (int i = 0; i < n; i++) {
+                    System.out.print(rotatedArray[i] + " ");
+                }
+            }
+        }
+        
+    </pre>
+    <img src="out13.png" alt="">
+</body>
+</html>

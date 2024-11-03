@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.awt.*;
+import java.awt.event.*;
+
+class iApp {
+    public static void main(String[] args) {
+        final Frame frame = new Frame("Choice AWT Application");
+        frame.setLayout(new FlowLayout());
+
+        Label label = new Label("Select an option:");
+        final Choice choice = new Choice();
+        
+        choice.add("Option 1");
+        choice.add("Option 2");
+        choice.add("Option 3");
+
+        Button button = new Button("Show Selection");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                String selected = choice.getSelectedItem();
+                System.out.println("Selected: " + selected);
+            }
+        });
+
+        frame.add(label);
+        frame.add(choice);
+        frame.add(button);
+
+        frame.setSize(300, 150);
+        
+
+        frame.setVisible(true);
+    }
+}
+
+    
+    </pre>
+    <img src="awt10.png" alt="">
+</body>
+</html>

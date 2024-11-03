@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class f {
+            public static void main(String[] args) {
+                
+                int[] array = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+        
+               
+                find(array);
+            }
+        
+            public static void find(int[] array) {
+             
+                int[] frequency = new int[100]; 
+        
+               
+                for (int num : array) {
+                    frequency[num]++;
+                }
+                System.out.println("Element Frequencies:");
+                for (int i = 0; i < frequency.length; i++) {
+                    if (frequency[i] > 0) {
+                        System.out.println("Element: " + i + ", Frequency: " + frequency[i]);
+                    }
+                }
+            }
+        }
+        
+        
+    </pre>
+    <img src="out1d2.png" alt="">
+</body>
+</html>

@@ -1,0 +1,57 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class IdentityMatrixCheck {
+            public static void main(String[] args) {
+                int[][] matrix = {
+                    {1, 0, 0},
+                    {0, 1, 0},
+                    {0, 0, 1}
+                };
+        
+                if (isIdentityMatrix(matrix)) {
+                    System.out.println("The given matrix is an identity matrix.");
+                } else {
+                    System.out.println("The given matrix is not an identity matrix.");
+                }
+            }
+        
+            public static boolean isIdentityMatrix(int[][] matrix) {
+                int rows = matrix.length;
+                int cols = matrix[0].length;
+        
+                if (rows != cols) {
+                    return false;
+                }
+        
+                for (int i = 0; i < rows; i++) {
+                    for (int j = 0; j < cols; j++) {
+                        if (i == j && matrix[i][j] != 1) {
+                            return false;
+                        } else if (i != j && matrix[i][j] != 0) {
+                            return false;
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+        
+    </pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class d1 {
+            public static void main(String[] args) {
+                int[] array = {1, 2, 3, 4, 5, 2, 3, 6, 7, 8, 1};
+                boolean[] seen = new boolean[100]; 
+        
+                for (int num : array) {
+                    if (num >= 0 && num < 100) {
+                        if (seen[num]) {
+                            System.out.println(num);
+                        } else {
+                            seen[num] = true;
+                        }
+                    }
+                }
+            }
+        }
+         
+        
+    </pre>
+    <img src="out1d4.png" alt="">
+</body>
+</html>

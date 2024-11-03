@@ -1,0 +1,64 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        public class MatrixMultiplication {
+            public static void main(String[] args) {
+                int[][] matrixA = {
+                    {1, 2, 3},
+                    {4, 5, 6}
+                };
+        
+                int[][] matrixB = {
+                    {7, 8},
+                    {9, 10},
+                    {11, 12}
+                };
+        
+                int rowsA = matrixA.length;
+                int colsA = matrixA[0].length;
+                int rowsB = matrixB.length;
+                int colsB = matrixB[0].length;
+        
+                if (colsA != rowsB) {
+                    System.out.println("Matrix multiplication not possible.");
+                    return;
+                }
+        
+                int[][] productMatrix = new int[rowsA][colsB];
+        
+                for (int i = 0; i < rowsA; i++) {
+                    for (int j = 0; j < colsB; j++) {
+                        for (int k = 0; k < colsA; k++) {
+                            productMatrix[i][j] += matrixA[i][k] * matrixB[k][j];
+                        }
+                    }
+                }
+        
+                System.out.println("The product of the two matrices is:");
+                for (int i = 0; i < rowsA; i++) {
+                    for (int j = 0; j < colsB; j++) {
+                        System.out.print(productMatrix[i][j] + " ");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+        
+    </pre>
+</body>
+</html>
