@@ -1,0 +1,52 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.sql.Connection;
+        import java.sql.DriverManager;
+        import java.sql.PreparedStatement;
+        import java.sql.SQLException;
+        
+        public class DeleteRow {
+            public static void main(String[] args) {
+                String url = "jdbc:mysql://localhost:3306/your_database";
+                String user = "your_username";
+                String password = "your_password";
+        
+                String sql = "DELETE FROM Employees WHERE name = ?";
+        
+                try (Connection connection = DriverManager.getConnection(url, user, password);
+                     PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                    preparedStatement.setString(1, "John Doe");
+                    preparedStatement.executeUpdate();
+                    System.out.println("Row deleted successfully.");
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        
+          
+        
+    </pre>
+<h2>
+    Output:
+</h2>
+Row deleted successfully.
+</body>
+</html>

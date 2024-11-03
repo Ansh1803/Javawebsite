@@ -1,0 +1,64 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.sql.Connection;
+        import java.sql.DriverManager;
+        import java.sql.SQLException;
+        
+        public class MySQLConnection {
+            public static void main(String[] args) {
+                String url = "jdbc:mysql://localhost:3306/your_database"; // Replace with your database name
+                String user = "your_username"; // Replace with your MySQL username
+                String password = "your_password"; // Replace with your MySQL password
+        
+                Connection connection = null;
+        
+                try {
+                    Class.forName("com.mysql.cj.jdbc.Driver");
+                    connection = DriverManager.getConnection(url, user, password);
+                    System.out.println("Connection established successfully.");
+                } catch (ClassNotFoundException e) {
+                    System.out.println("MySQL JDBC Driver not found.");
+                    e.printStackTrace();
+                } catch (SQLException e) {
+                    System.out.println("Connection failed.");
+                    e.printStackTrace();
+                } finally {
+                    try {
+                        if (connection != null) {
+                            connection.close();
+                            System.out.println("Connection closed.");
+                        }
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+        
+       
+        
+        
+    </pre>
+    
+   <h2> Output:</h2>
+    Connection established successfully.
+    Connection closed.
+    
+</body>
+</html>

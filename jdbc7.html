@@ -1,0 +1,55 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.sql.Connection;
+        import java.sql.DriverManager;
+        import java.sql.ResultSet;
+        import java.sql.SQLException;
+        import java.sql.Statement;
+        
+        public class ScrollableResultSet {
+            public static void main(String[] args) {
+                String url = "jdbc:mysql://localhost:3306/your_database";
+                String user = "your_username";
+                String password = "your_password";
+        
+                try (Connection connection = DriverManager.getConnection(url, user, password);
+                     Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+                     ResultSet resultSet = statement.executeQuery("SELECT * FROM Employees")) {
+                    resultSet.last();
+                    System.out.println("Enter row number (1 to " + resultSet.getRow() + "): ");
+                    int rowNum = 1; // Replace with user input
+                    if (resultSet.absolute(rowNum)) {
+                        System.out.println("ID: " + resultSet.getInt("id") + ", Name: " + resultSet.getString("name") + ", Age: " + resultSet.getInt("age"));
+                    } else {
+                        System.out.println("Row not found.");
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+       
+        
+        
+    </pre>
+    <h2>Output:</h2>
+    ID: 1, Name: John Doe, Age: 31
+
+</body>
+</html>

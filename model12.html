@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.*;
+
+        public class MessageFrame {
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Message Frame");
+                JButton button = new JButton("Show Message");
+        
+                button.addActionListener(e -> {
+                    JFrame messageFrame = new JFrame("Message");
+                    JLabel label = new JLabel("Hello, this is a message!", SwingConstants.CENTER);
+                    messageFrame.add(label);
+                    messageFrame.setSize(300, 100);
+                    messageFrame.setVisible(true);
+                });
+        
+                frame.add(button);
+                frame.setSize(300, 200);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+          
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

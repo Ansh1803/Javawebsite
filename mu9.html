@@ -1,0 +1,49 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif; 
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class MyThread extends Thread {
+            public void run() {
+                System.out.println("Thread is running: " + this.getName());
+            }
+        }
+        
+        public class ThreadExample {
+            public static void main(String[] args) {
+                MyThread thread1 = new MyThread();
+                MyThread thread2 = new MyThread();
+                thread1.start();
+                thread2.start();
+            }
+        }
+        
+        
+        
+        
+       
+        
+        
+    </pre>
+    <h2>Output:</h2>
+    
+    Thread is running: Thread-0
+    Thread is running: Thread-1
+    
+    
+
+</body>
+</html>

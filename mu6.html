@@ -1,0 +1,64 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif; 
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.net.*;
+import java.io.*;
+import java.util.*;
+
+class CrawlerThread extends Thread {
+    private String url;
+
+    public CrawlerThread(String url) {
+        this.url = url;
+    }
+
+    public void run() {
+        try {
+            URL urlObj = new URL(url);
+            BufferedReader in = new BufferedReader(new InputStreamReader(urlObj.openStream()));
+            String inputLine;
+            while ((inputLine = in.readLine()) != null) {
+                System.out.println(inputLine);
+            }
+            in.close();
+        } catch (IOException e) {
+            System.out.println("Failed to crawl: " + url);
+        }
+    }
+}
+
+public class WebCrawler {
+    public static void main(String[] args) {
+        String[] websites = {"http://example.com", "http://example.org"};
+        for (String website : websites) {
+            new CrawlerThread(website).start();
+        }
+    }
+}
+
+
+
+       
+        
+        
+    </pre>
+    <h2>Output:</h2>
+    
+
+</body>
+</html>

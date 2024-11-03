@@ -1,0 +1,90 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class PreparedStatementExample {
+    public static void main(String[] args) {
+        String url = "jdbc:mysql://localhost:3306/your_database";
+        String user = "your_username";
+        String password = "your_password";
+
+        try (Connection connection = DriverManager.getConnection(url, user, password)) {
+            String insertSQL = "INSERT INTO Employees (name, age) VALUES (?, ?)";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
+                preparedStatement.setString(1, "Alice");
+                preparedStatement.setInt(2, 25);
+                preparedStatement.executeUpdate();
+                System.out.println("Row inserted.");
+            }
+
+            String selectSQL = "SELECT * FROM Employees";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(selectSQL);
+                 ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    System.out.println("ID: " + resultSet.getInt("id") + ", Name: " + resultSet.getString("name") + ", Age: " + resultSet.getInt("age"));
+                }
+            }
+
+            String updateSQL = "UPDATE Employees SET age = ? WHERE name = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(updateSQL)) {
+                preparedStatement.setInt(1, 26);
+                preparedStatement.setString(2, "Alice");
+                preparedStatement.executeUpdate();
+                System.out.println("Row updated.");
+            }
+
+            String deleteSQL = "DELETE FROM Employees WHERE name = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(deleteSQL)) {
+                preparedStatement.setString(1, "Alice");
+                preparedStatement.executeUpdate();
+                System.out.println("Row deleted.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+/*
+Output:
+Row inserted.
+ID: 1, Name: John Doe, Age: 31
+Row updated.
+Row deleted.
+*/
+
+       
+        
+    </pre>
+    <h2>
+        Output:
+        </h2>
+        /*
+
+Row inserted.
+ID: 1, Name: John Doe, Age: 31
+Row updated.
+Row deleted.
+
+</body>
+</html>

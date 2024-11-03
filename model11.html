@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+    
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class ListBoxExample {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("List Box Example");
+        DefaultListModel<String> listModel = new DefaultListModel<>();
+        listModel.addElement("Item 1");
+        listModel.addElement("Item 2");
+        listModel.addElement("Item 3");
+
+        JList<String> list = new JList<>(listModel);
+        list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        
+        JButton button = new JButton("Show Selected");
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                java.util.List<String> selectedValues = list.getSelectedValuesList();
+                JOptionPane.showMessageDialog(frame, "Selected: " + selectedValues);
+            }
+        });
+
+        frame.add(new JScrollPane(list), BorderLayout.CENTER);
+        frame.add(button, BorderLayout.SOUTH);
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
+
+      
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

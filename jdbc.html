@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>inherit</title>
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="secondcss.css">
+    
+</head>
+<body bgcolor="black">
+    <header>
+      
+        
+        <h1></h1>
+        <h1><a href="index.html" class="no-underline">TOPICS OF JAVA</a></h1>
+
+        <style>
+            .container {
+              display: grid;
+              grid-template-rows: 100%;
+              grid-template-columns: 20% 80%;
+              height: 83vh;
+              
+              
+              background-color:rgb(54, 54, 54));
+               
+        
+            }
+            .no-underline {
+            text-decoration: none; 
+            color: #ffffff; 
+                  }
+            
+        
+            .left {
+              background-color:;
+              padding: 10px;
+              overflow: scroll;             
+            }
+            ::-webkit-scrollbar {
+border-radius: 1%;
+background: rgb(54, 54, 54);
+            }
+        
+            .right {
+              background-image: url("");
+              background-color:rgb(54, 54, 54);
+              color:white;
+              padding:10px;
+              border-radius: ;
+              overflow: scroll;
+              
+            }
+         
+        
+            .button {
+              display: block;
+              font:'Poppins', sans-serif;
+              width: 80%;
+              margin: 10px auto;
+              padding: 10px;
+              border: none;
+              border-radius: 10px;
+              color: white;
+              font-size: 15px;
+
+              cursor: pointer;
+              background-color:rgb(54, 54, 54);
+              
+            }
+            #iframe-container {
+            width: 100%;
+            margin: 20px auto;
+            
+            background-color: white;
+        }
+        
+          
+        
+            
+            nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+}
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+   
+}
+header {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+}
+          </style>
+       
+          <nav>
+            <ul>
+              <li><a href="basic.html">Basic</a></li>
+              <li><a href="function.html">Function</a></li>
+              <li><a href="interface.html">Interface</a></li>
+              <li><a href="package.html">Package</a></li>
+              <li><a href="opps.html">Oops</a></li>
+              <li><a href="String.html">String</a></li>
+              <li><a href="inheritance.html">Inheritance</a></li>
+              <li><a href="ex.html">Exception</a></li>
+              <li><a href="1d.html">1D array</a></li>
+              <li><a href="awt.html">Graphical User Interface</a></li>
+              <li><a href="jdbc.html">Java database connection</a></li>  
+              <li><a href="2d.html">2D Array</a></li>
+              <li><a href="in.html">Input/Output</a></li>
+              <li><a href="thread.html">Multi-Threading</a></li>
+              <li><a href="model.html">Delegation Event Model</a></li>
+              <li><a href="applets.html">Applets</a></li>  
+        </nav>
+    </header>
+    
+    
+    <div class="container">
+        <div class="left">
+            <h1 style="color: hsl(0, 0%, 99%)">Questions</h1>
+            <button class="button" onclick="loadProgram('jdbc1.html')">  1. Create the connection with MySQL Database and manage the driver.
+
+            </button>
+            <button class="button" onclick="loadProgram('jdbc2.html')">  2. Create the table in the database from Java API.
+
+            </button>
+
+            <button class="button" onclick="loadProgram('jdbc3.html')"> 3. Insert the row in the table in the database from Java API.
+
+            </button>
+
+            <button class="button" onclick="loadProgram('jdbc4.html')">  4. Update the row in the table in the database from Java API.
+
+            </button>
+
+            <button class="button" onclick="loadProgram('jdbc5.html')"> 5. Delete the row in the table in the database from Java API.
+
+            </button>
+
+            <button class="button" onclick="loadProgram('jdbc6.html')">6. Select multiple rows from the database table in Java API and show the result on the screen.
+
+            </button>
+            <button class="button" onclick="loadProgram('jdbc7.html')">7. Create a Scrollable Readonly Resultset and ask the row number from the user and display that row on the screen.
+
+            </button>
+            <button class="button" onclick="loadProgram('jdbc8.html')"> 8. Create a Scrollable Updateable Resultset and insert a new row, update an existing row and delete the row from Resultset and also the changes should be made to the database also. The values should be inserted, updated and deleted by the user only.
+
+            </button>
+            <button class="button" onclick="loadProgram('jdbc9.html')"> 9. Create a Java Program to show, insert, update, delete of the table in Java API through PreparedStatement
+
+            </button>
+
+
+
+
+          
+        </div>
+      
+        
+        <div class="right">
+          
+          <h1 style="color: hsl(0, 0%, 99%);;">Programs for JAVA</h1>
+          <div class=".container">
+          
+    
+            <iframe id="program-frame" width="100%" height="800" src="program0.c" ></iframe>
+      
+
+          </div>
+        </div>
+      </div></div> 
+                </div>
+      </div>
+      <script>
+        function loadProgram(programName) {
+            document.getElementById('program-frame').src = programName;
+        }
+    </script>
+
+</body>
+</html>

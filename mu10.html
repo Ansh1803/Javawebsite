@@ -1,0 +1,55 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif; 
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class NamedThread extends Thread {
+            public NamedThread(String name) {
+                super(name);
+            }
+        
+            public void run() {
+                System.out.println("Thread: " + getName() + " with priority: " + getPriority());
+            }
+        }
+        
+        public class NamedThreadExample {
+            public static void main(String[] args) {
+                NamedThread thread1 = new NamedThread("HighPriorityThread");
+                NamedThread thread2 = new NamedThread("LowPriorityThread");
+                thread1.setPriority(Thread.MAX_PRIORITY);
+                thread2.setPriority(Thread.MIN_PRIORITY);
+                thread1.start();
+                thread2.start();
+            }
+        }
+        
+    
+    
+        
+        
+       
+        
+        
+    </pre>
+    <h2>Output:</h2>
+    Thread: HighPriorityThread with priority: 10
+    Thread: LowPriorityThread with priority: 1
+
+    
+
+</body>
+</html>

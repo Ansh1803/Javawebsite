@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import javax.swing.*;
+        import java.awt.event.*;
+        
+        public class SwitchFrames {
+            public static void main(String[] args) {
+                JFrame frame1 = new JFrame("Frame 1");
+                JButton button = new JButton("Switch to Frame 2");
+                
+                button.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        frame1.setVisible(false);
+                        createFrame2();
+                    }
+                });
+                
+                frame1.add(button);
+                frame1.setSize(300, 200);
+                frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame1.setVisible(true);
+            }
+            
+            public static void createFrame2() {
+                JFrame frame2 = new JFrame("Frame 2");
+                JButton button = new JButton("Switch to Frame 1");
+                
+                button.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        frame2.setVisible(false);
+                        main(null);
+                    }
+                });
+                
+                frame2.add(button);
+                frame2.setSize(300, 200);
+                frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame2.setVisible(true);
+            }
+        }
+          
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

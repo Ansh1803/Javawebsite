@@ -1,0 +1,104 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif; 
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class SharedResource {
+            private int count = 0;
+            private boolean isAvailable = false;
+        
+            public synchronized void produce() throws InterruptedException {
+                while (isAvailable) {
+                    wait();
+                }
+                count++;
+                isAvailable = true;
+                notify();
+            }
+        
+            public synchronized void consume() throws InterruptedException {
+                while (!isAvailable) {
+                    wait();
+                }
+                System.out.println("Consumed: " + count);
+                isAvailable = false;
+                notify();
+            }
+        }
+        
+        class Producer extends Thread {
+            private SharedResource resource;
+        
+            public Producer(SharedResource resource) {
+                this.resource = resource;
+            }
+        
+            public void run() {
+                try {
+                    for (int i = 0; i < 5; i++) {
+                        resource.produce();
+                        Thread.sleep(100);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        class Consumer extends Thread {
+            private SharedResource resource;
+        
+            public Consumer(SharedResource resource) {
+                this.resource = resource;
+            }
+        
+            public void run() {
+                try {
+                    for (int i = 0; i < 5; i++) {
+                        resource.consume();
+                        Thread.sleep(150);
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        
+        public class NotifyExample {
+            public static void main(String[] args) {
+                SharedResource resource = new SharedResource();
+                Producer producer = new Producer(resource);
+                Consumer consumer = new Consumer(resource);
+                producer.start();
+                consumer.start();
+            }
+        }
+        
+        
+      
+        
+        
+       
+        
+        
+    </pre>
+    <h2>Output:</h2>
+    Output will vary due to concurrent execution.
+        
+    
+
+</body>
+</html>

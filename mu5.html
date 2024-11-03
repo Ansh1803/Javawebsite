@@ -1,0 +1,83 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif; 
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class PrimeSumThread extends Thread {
+            private int start, end;
+            private int sum;
+        
+            public PrimeSumThread(int start, int end) {
+                this.start = start;
+                this.end = end;
+            }
+        
+            public void run() {
+                sum = 0;
+                for (int i = start; i <= end; i++) {
+                    if (isPrime(i)) {
+                        sum += i;
+                    }
+                }
+            }
+        
+            public int getSum() {
+                return sum;
+            }
+        
+            private boolean isPrime(int num) {
+                if (num <= 1) return false;
+                for (int i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i == 0) return false;
+                }
+                return true;
+            }
+        }
+        
+        public class PrimeSum {
+            public static void main(String[] args) {
+                PrimeSumThread thread1 = new PrimeSumThread(1, 50);
+                PrimeSumThread thread2 = new PrimeSumThread(51, 100);
+                
+                thread1.start();
+                thread2.start();
+                
+                try {
+                    thread1.join();
+                    thread2.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                
+                int totalSum = thread1.getSum() + thread2.getSum();
+                System.out.println("Sum of prime numbers: " + totalSum);
+            }
+        }
+        
+        
+        
+           
+       
+        
+        
+    </pre>
+    <h2>Output:</h2>
+    Sum of prime numbers: 1060
+        
+    
+
+</body>
+</html>

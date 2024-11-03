@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.*;
+        import java.awt.*;
+        import java.awt.event.ActionEvent;
+        import java.awt.event.ActionListener;
+        class B{
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Button to Display Image");
+                JButton button = new JButton("Show Image");
+                JLabel imageLabel = new JLabel();
+                
+                button.addActionListener(new ActionListener() {
+                   
+                    public void actionPerformed(ActionEvent e) {
+                        
+                        ImageIcon imageIcon = new ImageIcon("path/to/your/image.jpg");
+                       final ImageLabel.setIcon(imageIcon);
+                       final ImageLabel.setText(""); 
+                    }
+                });
+        
+                frame.setLayout(new FlowLayout());
+                frame.add(button);
+                frame.add(imageLabel);
+                
+                frame.setSize(400, 400);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

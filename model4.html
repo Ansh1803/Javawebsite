@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.*;
+        import java.awt.*;
+        import java.awt.event.ActionEvent;
+        import java.awt.event.ActionListener;
+        
+        public class RadioButtonExample {
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Radio Button Example");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setSize(300, 200);
+                frame.setLayout(new FlowLayout());
+        
+                JRadioButton radioButton1 = new JRadioButton("Option 1");
+                JRadioButton radioButton2 = new JRadioButton("Option 2");
+                
+                ButtonGroup group = new ButtonGroup();
+                group.add(radioButton1);
+                group.add(radioButton2);
+        
+                JButton button = new JButton("Show Selected");
+        
+                JLabel label = new JLabel("Selected: None");
+        
+                button.addActionListener(new ActionListener() {
+               
+                    public void actionPerformed(ActionEvent e) {
+                        String selected = "Selected: None";
+                        if (radioButton1.isSelected()) {
+                            selected = "Selected: " + radioButton1.getText();
+                        } else if (radioButton2.isSelected()) {
+                            selected = "Selected: " + radioButton2.getText();
+                        }
+                        label.setText(selected);
+                    }
+                });
+        
+                frame.add(radioButton1);
+                frame.add(radioButton2);
+                frame.add(button);
+                frame.add(label);
+        
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

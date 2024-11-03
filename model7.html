@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.*;
+        import java.awt.event.*;
+        
+        public class CheckBoxExample {
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Check Box Example");
+                JCheckBox checkBox = new JCheckBox("Check me");
+        
+                checkBox.addActionListener(new ActionListener() {
+                    public void actionPerformed(ActionEvent e) {
+                        System.out.println("Checkbox selected: " + checkBox.isSelected());
+                    }
+                });
+        
+                frame.add(checkBox);
+                frame.setSize(200, 100);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.JFrame;
+        import javax.swing.JPanel;
+        import javax.swing.JTextArea;
+        import javax.swing.JPasswordField;
+        import javax.swing.JLabel;
+        import java.awt.BorderLayout;
+        
+         class T {
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Text Area and Password Field");
+                JPanel panel = new JPanel();
+                
+                JTextArea textArea = new JTextArea(10, 30);
+                JPasswordField passwordField = new JPasswordField(20);
+                
+                JLabel label = new JLabel("Enter your password:");
+        
+                panel.add(textArea);
+                panel.add(label);
+                panel.add(passwordField);
+        
+                frame.add(panel, BorderLayout.CENTER);
+                frame.setSize(400, 300);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

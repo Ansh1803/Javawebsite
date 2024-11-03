@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.JFrame;
+        import javax.swing.JLabel;
+        import javax.swing.JPanel;
+        import java.awt.FlowLayout;
+        
+         class e{
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Display Text in Frame");
+                JPanel panel = new JPanel();
+                JLabel label = new JLabel("Hello, welcome to my Java application!");
+        
+                panel.setLayout(new FlowLayout());
+                panel.add(label);
+                
+                frame.add(panel);
+                frame.setSize(400, 200);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

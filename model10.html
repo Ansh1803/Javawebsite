@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+  
+        import javax.swing.*;
+        import java.awt.*;
+        
+        public class ButtonBorderExample {
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Button Border Example");
+                JButton button = new JButton("Press Me");
+                button.setBorder(BorderFactory.createLineBorder(Color.BLUE, 5));
+        
+                frame.add(button);
+                frame.setSize(200, 100);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

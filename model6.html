@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import javax.swing.*;
+        import java.awt.event.*;
+        
+        public class MouseEventExample {
+            public static void main(String[] args) {
+                JFrame frame = new JFrame("Mouse Event Example");
+                JLabel label = new JLabel("Click anywhere in the frame");
+        
+                label.addMouseListener(new MouseAdapter() {
+                    public void mouseClicked(MouseEvent e) {
+                        label.setText("Mouse Clicked at: (" + e.getX() + ", " + e.getY() + ")");
+                    }
+                });
+        
+                frame.add(label);
+                frame.setSize(300, 200);
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setVisible(true);
+            }
+        }
+          
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 
