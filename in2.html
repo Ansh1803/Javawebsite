@@ -1,0 +1,52 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        
+        import java.io.BufferedReader;
+        import java.io.IOException;
+        import java.io.InputStreamReader;
+        
+        public class ReadString {
+            public static void main(String[] args) {
+                System.out.print("Enter a string: ");
+                try {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                    String input = reader.readLine();
+                    System.out.println("You entered: " + input);
+                } catch (IOException e) {
+                    System.out.println("An error occurred: " + e.getMessage());
+                }
+            }
+        }
+        
+        
+         
+       
+        
+        
+    </pre>
+    
+   <h2> Output:</h2>
+   
+   Enter a string: Hello World
+   You entered: Hello World
+   
+
+    
+</body>
+</html>

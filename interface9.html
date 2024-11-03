@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        interface Searchable {
+            void search(String keyword);
+        }
+        
+        class Document implements Searchable {
+            
+            public void search(String keyword) {
+                System.out.println("Searching for '" + keyword + "' in Document.");
+            }
+        }
+        
+        class WebPage implements Searchable {
+        
+            public void search(String keyword) {
+                System.out.println("Searching for '" + keyword + "' in WebPage.");
+            }
+        }
+        
+        public class SearchableExample {
+            public static void main(String[] args) {
+                Searchable document = new Document();
+                Searchable webpage = new WebPage();
+        
+                document.search("Java");
+                webpage.search("Interface");
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Searching for 'Java' in Document.
+    Searching for 'Interface' in WebPage.
+    
+    </body> 
+</html> 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Person {
+            abstract void eat();
+            abstract void exercise();
+        }
+        
+        class Athlete extends Person {
+            
+            void eat() {
+                System.out.println("Athlete eats a balanced diet with high protein.");
+            }
+        
+            
+            void exercise() {
+                System.out.println("Athlete trains intensively every day.");
+            }
+        }
+        
+        class LazyPerson extends Person {
+            
+            void eat() {
+                System.out.println("Lazy person prefers fast food and snacks.");
+            }
+        
+            
+            void exercise() {
+                System.out.println("Lazy person rarely exercises.");
+            }
+        }
+        
+        public class PersonExample {
+            public static void main(String[] args) {
+                Person athlete = new Athlete();
+                Person lazyPerson = new LazyPerson();
+        
+                athlete.eat();
+                athlete.exercise();
+        
+                lazyPerson.eat();
+                lazyPerson.exercise();
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Athlete eats a balanced diet with high protein.
+    Athlete trains intensively every day.
+    Lazy person prefers fast food and snacks.
+    Lazy person rarely exercises.
+    
+    </body> 
+</html> 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        interface Encryptable {
+            String encrypt(String data);
+            String decrypt(String encryptedData);
+        }
+        
+        class AES implements Encryptable {
+            
+            public String encrypt(String data) {
+                return "AES Encrypted: " + data;
+            }
+        
+           
+            public String decrypt(String encryptedData) {
+                return "AES Decrypted: " + encryptedData.replace("AES Encrypted: ", "");
+            }
+        }
+        
+        class RSA implements Encryptable {
+          
+            public String encrypt(String data) {
+                return "RSA Encrypted: " + data;
+            }
+        
+            
+            public String decrypt(String encryptedData) {
+                return "RSA Decrypted: " + encryptedData.replace("RSA Encrypted: ", "");
+            }
+        }
+        
+        public class EncryptableExample {
+            public static void main(String[] args) {
+                Encryptable aes = new AES();
+                Encryptable rsa = new RSA();
+        
+                String data = "Hello World";
+                String aesEncrypted = aes.encrypt(data);
+                String rsaEncrypted = rsa.encrypt(data);
+        
+                System.out.println(aesEncrypted);
+                System.out.println(rsaEncrypted);
+        
+                System.out.println(aes.decrypt(aesEncrypted));
+                System.out.println(rsa.decrypt(rsaEncrypted));
+            }
+        }
+        
+     
+        
+    </pre> 
+    <h2>Output:</h2> 
+    AES Encrypted: Hello World
+    RSA Encrypted: Hello World
+    AES Decrypted: Hello World
+    RSA Decrypted: Hello World
+    */
+    </body> 
+</html> 

@@ -1,0 +1,104 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class Employee {
+            String name;
+            String address;
+            double salary;
+            String jobTitle;
+        
+            Employee(String name, String address, double salary, String jobTitle) {
+                this.name = name;
+                this.address = address;
+                this.salary = salary;
+                this.jobTitle = jobTitle;
+            }
+        
+            double calculateBonus() {
+                return salary * 0.10; // 10% bonus
+            }
+        
+            String generateReport() {
+                return name + " (" + jobTitle + "): " + salary;
+            }
+        }
+        
+        class Manager extends Employee {
+            Manager(String name, String address, double salary) {
+                super(name, address, salary, "Manager");
+            }
+        
+            void manageProjects() {
+                System.out.println(name + " is managing projects.");
+            }
+        }
+        
+        class Developer extends Employee {
+            Developer(String name, String address, double salary) {
+                super(name, address, salary, "Developer");
+            }
+        
+            void developSoftware() {
+                System.out.println(name + " is developing software.");
+            }
+        }
+        
+        class Programmer extends Employee {
+            Programmer(String name, String address, double salary) {
+                super(name, address, salary, "Programmer");
+            }
+        
+            void writeCode() {
+                System.out.println(name + " is writing code.");
+            }
+        }
+        
+        public class Company {
+            public static void main(String[] args) {
+                Manager manager = new Manager("Alice", "123 Main St", 80000);
+                Developer developer = new Developer("Bob", "456 Oak Ave", 60000);
+                Programmer programmer = new Programmer("Charlie", "789 Pine Rd", 50000);
+        
+                System.out.println(manager.generateReport());
+                System.out.println("Bonus: " + manager.calculateBonus());
+                manager.manageProjects();
+        
+                System.out.println(developer.generateReport());
+                System.out.println("Bonus: " + developer.calculateBonus());
+                developer.developSoftware();
+        
+                System.out.println(programmer.generateReport());
+                System.out.println("Bonus: " + programmer.calculateBonus());
+                programmer.writeCode();
+            }
+        }
+      
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Alice (Manager): 80000.0
+    Bonus: 8000.0
+    Alice is managing projects.
+    Bob (Developer): 60000.0
+    Bonus: 6000.0
+    Bob is developing software.
+    Charlie (Programmer): 50000.0
+    Bonus: 5000.0
+    Charlie is writing code.
+    
+    </body> 
+</html> 

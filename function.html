@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions</title>
+    <link rel="stylesheet" href="css2.css">
+    
+</head>
+<body bgcolor="black">
+    <header>
+      
+        
+        
+       
+        <style>
+          .no-underline {
+            text-decoration: none; 
+            color: #ffffff; 
+                  }
+            .container {
+              display: grid;
+              grid-template-rows: 100%;
+              grid-template-columns: 20% 80%;
+              height: 83vh;
+              
+              
+              background-color:rgb(54, 54, 54));
+               
+        
+            }
+            
+        
+            .left {
+              background-color:;
+              padding: 10px;
+              overflow: scroll;             
+            }
+            ::-webkit-scrollbar {
+border-radius: 1%;
+background: rgb(54, 54, 54);
+            }
+            .right {
+              background-image: url("");
+              background-color:rgb(54, 54, 54);
+              color:white;
+              padding:10px;
+              border-radius:;
+              overflow: scroll;
+              
+            }
+        
+            .button {
+              display: block;
+              font:'Poppins', sans-serif;
+              width: 80%;
+              margin: 10px auto;
+              padding: 10px;
+              border: none;
+              border-radius: 10px;
+              color: white;
+              font-size: 15px;
+
+              cursor: pointer;
+              background-color:rgb(54, 54, 54);
+              
+            }
+            #iframe-container {
+        width: 100%;
+        margin: 20px auto;
+        color: whitesmoke; /* This applies to text outside the iframe */
+        background-color: black; /* Change iframe background color */
+        border: 1px solid #fff; /* Optional: adds a border around the iframe */
+    }
+        
+          
+        
+            
+            nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+}
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+   
+}
+header {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+}
+
+          </style>
+               <h1><a href="index.html" class="no-underline">TOPICS OF JAVA</a></h1>
+
+       <nav>
+        <ul>
+          s
+          <li><a href="basic.html">Basic</a></li>
+          <li><a href="function.html">Function</a></li>
+          <li><a href="interface.html">Interface</a></li>
+          <li><a href="package.html">Package</a></li>
+          <li><a href="opps.html">Oops</a></li>
+          <li><a href="String.html">String</a></li>
+          <li><a href="inheritance.html">Inheritance</a></li>
+          <li><a href="ex.html">Exception</a></li>
+          <li><a href="1d.html">1D array</a></li>
+          <li><a href="awt.html">Graphical User Interface</a></li>
+          <li><a href="jdbc.html">Java database connection</a></li>  
+          <li><a href="2d.html">2D Array</a></li>
+          <li><a href="in.html">Input/Output</a></li>
+          <li><a href="thread.html">Multi-Threading</a></li>
+          <li><a href="model.html">Delegation Event Model</a></li>
+          <li><a href="applets.html">Applets</a></li>  
+            </ul>
+    </nav>
+    </header>
+    
+    
+    <div class="container">
+        <div class="left">
+            <h1 style="color: hsl(0, 0%, 99%)">Questions</h1>
+          <button class="button" onclick="loadProgram('function.java')">1. Write a Java method to find the smallest number among three numbers.             </button>
+          <button class="button" onclick="loadProgram('avg.java')">2. Write a Java method to compute the average of three numbers.
+
+
+          </button>
+          <button class="button" onclick="loadProgram('fq3.java')">3. Write a Java method to display the middle character of a string. Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character.</button>
+          <button class="button" onclick="loadProgram('count.java')">4. Write a Java method to count all the words in a string.  </button>
+         
+          <button class="button" onclick="loadProgram('investment.java')">5. Write a Java method to compute the future investment value at a given interest rate for a specified number of years</button>
+          <button class="button" onclick="loadProgram('fq6.java')">6. Write a Java method to print characters between two characters (i.e. A to P).    </button>
+          <button class="button" onclick="loadProgram('fq7.java')">7. Write a Java method to check whether a string is a valid password.</button>
+<button class="button" onclick="loadProgram('fq8.java')">8. Write a Java method to display the current date and time.</button>
+<button class="button" onclick="loadProgram('fq9.java')">9. Write a Java method to find all twin prime numbers less than 100.</button>
+<button class="button" onclick="loadProgram('fq10.java')">10. Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.</button>
+<button class="button" onclick="loadProgram('fq11.java')">11. Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false.</button>
+<button class="button" onclick="loadProgram('fq12.java')">12. Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false</button>
+
+
+
+
+          
+        </div>
+      
+        
+        <div class="right">
+          
+          <h1 style="color: hsl(0, 0%, 99%);;">Programs for JAVA</h1>
+          <div class=".container">
+          
+    
+            <iframe class="iframe-container" id="program-frame" width="100%" height="800" src="program0.c" ></iframe>
+      
+
+          </div>
+        </div>
+      </div></div> 
+                </div>
+      </div>
+      <script>
+        function loadProgram(programName) {
+            document.getElementById('program-frame').src = programName;
+        }
+    </script>
+
+</body>
+</html>

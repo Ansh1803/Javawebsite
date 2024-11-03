@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class NestedTryExample {
+            public static void main(String[] args) {
+                try {
+                    try {
+                        int result = 10 / 0;
+                    } catch (ArithmeticException e) {
+                        System.out.println("Caught inner exception: " + e.getMessage());
+                    }
+                    String str = null;
+                    System.out.println(str.length());
+                } catch (NullPointerException e) {
+                    System.out.println("Caught outer exception: " + e.getMessage());
+                }
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught inner exception: / by zero
+    Caught outer exception: Cannot invoke "String.length()" because "str" is null
+    
+    </body> 
+</html> 

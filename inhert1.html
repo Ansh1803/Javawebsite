@@ -1,0 +1,47 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class animal{
+            void makesound(){
+            System.out.println("makes a sound");
+                }
+            }
+            class cat extends animal{
+            void makesound(){
+            System.out.println("cats barks");
+             }
+            }
+             class main{
+            public static void main(String [] s){
+            animal myanimal= new animal();
+            cat mycat= new cat();
+            myanimal.makesound();
+            mycat.makesound();
+            }
+            }
+            /*OUTPUT
+            makes a sound
+            cats barks
+            */
+    </pre> 
+    <h2>Output:</h2> 
+    
+    makes a sound
+    cats barks
+   
+    </body> 
+</html> 

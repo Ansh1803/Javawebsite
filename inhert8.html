@@ -1,0 +1,62 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class Shape {
+            public double getPerimeter() {
+                return 0;
+            }
+        
+            public double getArea() {
+                return 0;
+            }
+        }
+        
+        class Circle extends Shape {
+            private double radius;
+        
+            public Circle(double radius) {
+                this.radius = radius;
+            }
+        
+            
+            public double getPerimeter() {
+                return 2 * Math.PI * radius;
+            }
+        
+            
+            public double getArea() {
+                return Math.PI * radius * radius;
+            }
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                Circle circle = new Circle(5.0);
+                System.out.printf("Circle Radius: %.2f%n", circle.radius);
+                System.out.printf("Perimeter: %.2f%n", circle.getPerimeter());
+                System.out.printf("Area: %.2f%n", circle.getArea());
+            }
+        }
+    
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Circle Radius: 5.00
+    Perimeter: 31.42
+    Area: 78.54
+    </body> 
+</html> 

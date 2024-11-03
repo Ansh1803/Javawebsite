@@ -1,0 +1,87 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Animal {
+            abstract void eat();
+            abstract void sleep();
+        }
+        
+        class Lion extends Animal {
+            
+            void eat() {
+                System.out.println("Lion hunts and eats meat.");
+            }
+        
+            
+            void sleep() {
+                System.out.println("Lion sleeps for 16-20 hours a day.");
+            }
+        }
+        
+        class Tiger extends Animal {
+            
+            void eat() {
+                System.out.println("Tiger stalks and eats large prey.");
+            }
+        
+            
+            void sleep() {
+                System.out.println("Tiger sleeps about 12-16 hours a day.");
+            }
+        }
+        
+        class Deer extends Animal {
+            
+            void eat() {
+                System.out.println("Deer grazes on grass and leaves.");
+            }
+        
+            
+            void sleep() {
+                System.out.println("Deer sleeps lightly in short intervals.");
+            }
+        }
+        
+        public class AnimalExample {
+            public static void main(String[] args) {
+                Animal lion = new Lion();
+                Animal tiger = new Tiger();
+                Animal deer = new Deer();
+        
+                lion.eat();
+                lion.sleep();
+        
+                tiger.eat();
+                tiger.sleep();
+        
+                deer.eat();
+                deer.sleep();
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+ 
+    Lion hunts and eats meat.
+    Lion sleeps for 16-20 hours a day.
+    Tiger stalks and eats large prey.
+    Tiger sleeps about 12-16 hours a day.
+    Deer grazes on grass and leaves.
+    Deer sleeps lightly in short intervals.
+    
+    </body> 
+</html> 

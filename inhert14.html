@@ -1,0 +1,53 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class Animal {
+            void makeSound() {
+                System.out.println("Animal makes a sound");
+            }
+        }
+        
+        class Dog extends Animal {
+            void makeSound() {
+                System.out.println("Dog barks");
+            }
+        }
+        
+        class Cat extends Animal {
+            void makeSound() {
+                System.out.println("Cat meows");
+            }
+        }
+        
+        public class DynamicMethodDispatchExample {
+            public static void main(String[] args) {
+                Animal myAnimal;
+        
+                myAnimal = new Dog();
+                myAnimal.makeSound(); // Calls Dog's method
+        
+                myAnimal = new Cat();
+                myAnimal.makeSound(); // Calls Cat's method
+            }
+        }
+     
+    </pre> 
+    <h2>Output:</h2> 
+    Dog barks
+    Cat meows
+    </body> 
+</html> 

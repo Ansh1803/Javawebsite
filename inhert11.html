@@ -1,0 +1,54 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class Animal {
+            String name;
+        
+            Animal(String name) {
+                this.name = name;
+            }
+        
+            void makeSound() {
+                System.out.println(name + " makes a sound.");
+            }
+        }
+        
+        class Dog extends Animal {
+            Dog(String name) {
+                super(name); 
+            }
+        
+            void makeSound() {
+                super.makeSound(); 
+                System.out.println(name + " barks.");
+            }
+        }
+        
+        public class SuperKeywordExample {
+            public static void main(String[] args) {
+                Dog dog = new Dog("Buddy");
+                dog.makeSound();
+            }
+        }
+       
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Buddy makes a sound.
+    Buddy barks.
+    </body> 
+</html> 

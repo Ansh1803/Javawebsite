@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        interface flyable
+        {
+            void fly_obj();
+        }
+        class spacecraft implements flyable
+        {
+            public void fly_obj()
+            {
+                System.out.println("Spacecraft flys to space");
+            }
+        }
+        class airplane implements flyable
+        {
+            public void fly_obj()
+            {
+                System.out.println("airplane goes shuuuuu");
+            }
+        }
+        class helectoper implements flyable
+        {
+            public void fly_obj()
+            {
+                System.out.println("helecopter helecopter");
+            }
+        }
+    </pre> 
+   
+    </body> 
+</html> 

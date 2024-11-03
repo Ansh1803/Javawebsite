@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        interface Playable {
+            void play();
+        }
+        
+        class Football implements Playable {
+            
+            public void play() {
+                System.out.println("Playing Football.");
+            }
+        }
+        
+        class Volleyball implements Playable {
+            
+            public void play() {
+                System.out.println("Playing Volleyball.");
+            }
+        }
+        
+        class Basketball implements Playable {
+            
+            public void play() {
+                System.out.println("Playing Basketball.");
+            }
+        }
+        
+        public class PlayableExample {
+            public static void main(String[] args) {
+                Playable football = new Football();
+                Playable volleyball = new Volleyball();
+                Playable basketball = new Basketball();
+        
+                football.play();
+                volleyball.play();
+                basketball.play();
+            }
+        }
+        
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Playing Football.
+    Playing Volleyball.
+    Playing Basketball.
+    
+    </body> 
+</html> 

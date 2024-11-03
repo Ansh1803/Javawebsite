@@ -1,0 +1,39 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class ThrowsKeywordExample {
+            public static void main(String[] args) {
+                try {
+                    methodThatThrows();
+                } catch (Exception e) {
+                    System.out.println("Caught an exception: " + e.getMessage());
+                }
+            }
+        
+            public static void methodThatThrows() throws Exception {
+                throw new Exception("Exception thrown from method.");
+            }
+        }
+        
+       
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Caught an exception: Exception thrown from method.
+    
+    </body> 
+</html> 

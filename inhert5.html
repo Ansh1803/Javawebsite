@@ -1,0 +1,46 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class BankAccount {
+            int balance =100;
+            void deposit()
+            {
+        
+            }
+            void withdraw()
+            {
+               
+            }
+        }
+        class SavingAccount extends BankAccount {
+        
+            void withdraw()
+            {
+              if(balance<100)
+              {
+                System.out.println("insufficent balace cannot withdraw");
+              }
+              else{
+                System.out.println("sufficent balance");
+              }
+            }
+        }
+    </pre> 
+    <h2>Output:</h2> 
+.
+    </body> 
+</html> 

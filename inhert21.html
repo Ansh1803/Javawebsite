@@ -1,0 +1,68 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Vehicle {
+            abstract void startEngine();
+            abstract void stopEngine();
+        }
+        
+        class Car extends Vehicle {
+            
+            void startEngine() {
+                System.out.println("Car engine started.");
+            }
+        
+            
+            void stopEngine() {
+                System.out.println("Car engine stopped.");
+            }
+        }
+        
+        class Motorcycle extends Vehicle {
+            
+            void startEngine() {
+                System.out.println("Motorcycle engine started.");
+            }
+        
+            
+            void stopEngine() {
+                System.out.println("Motorcycle engine stopped.");
+            }
+        }
+        
+        public class VehicleExample {
+            public static void main(String[] args) {
+                Vehicle car = new Car();
+                Vehicle motorcycle = new Motorcycle();
+        
+                car.startEngine();
+                car.stopEngine();
+        
+                motorcycle.startEngine();
+                motorcycle.stopEngine();
+            }
+        }
+       
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Car engine started.
+    Car engine stopped.
+    Motorcycle engine started.
+    Motorcycle engine stopped.
+    </body> 
+</html> 

@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class Vehicle {
+            String make, model, fuelType;
+        
+            Vehicle(String make, String model, String fuelType) {
+                this.make = make;
+                this.model = model;
+                this.fuelType = fuelType;
+            }
+        
+            double calculateFuelEfficiency(double miles, double gallons) {
+                return miles / gallons;
+            }
+        
+            double distanceTraveled(double hours, double speed) {
+                return hours * speed;
+            }
+        
+            double maxSpeed() {
+                return 0;
+            }
+        }
+        
+        class Truck extends Vehicle {
+            Truck(String make, String model, String fuelType) {
+                super(make, model, fuelType);
+            }
+        
+            @Override
+            double maxSpeed() {
+                return 75;
+            }
+        }
+        
+        class Car extends Vehicle {
+            Car(String make, String model, String fuelType) {
+                super(make, model, fuelType);
+            }
+        
+        
+            double maxSpeed() {
+                return 120;
+            }
+        }
+        
+        class Motorcycle extends Vehicle {
+            Motorcycle(String make, String model, String fuelType) {
+                super(make, model, fuelType);
+            }
+        
+            
+            double maxSpeed() {
+                return 100;
+            }
+        }
+        
+        public class Main {
+            public static void main(String[] args) {
+                Vehicle truck = new Truck("Ford", "F-150", "Gasoline");
+                Vehicle car = new Car("Toyota", "Camry", "Gasoline");
+                Vehicle motorcycle = new Motorcycle("Harley-Davidson", "Sportster", "Gasoline");
+        
+                System.out.println("Truck Max Speed: " + truck.maxSpeed());
+                System.out.println("Car Max Speed: " + car.maxSpeed());
+                System.out.println("Motorcycle Max Speed: " + motorcycle.maxSpeed());
+            }
+        }
+
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Truck Max Speed: 75.00 mph
+    Car Max Speed: 120.00 mph
+    Motorcycle Max Speed: 100.00 mph
+    Truck Distance Traveled: 120.00 miles
+    Truck Fuel Efficiency: 8.00 mpg
+    </body> 
+</html> 

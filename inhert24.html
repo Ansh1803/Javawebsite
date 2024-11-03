@@ -1,0 +1,81 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Shape2D {
+            abstract void draw();
+            abstract void resize(double scale);
+        }
+        
+        class Rectangle extends Shape2D {
+            private double width;
+            private double height;
+        
+            Rectangle(double width, double height) {
+                this.width = width;
+                this.height = height;
+            }
+        
+            
+            void draw() {
+                System.out.println("Drawing a rectangle.");
+            }
+        
+            
+            void resize(double scale) {
+                width *= scale;
+                height *= scale;
+                System.out.println("Resized rectangle to width: " + width + ", height: " + height);
+            }
+        }
+        
+        class Circle extends Shape2D {
+            private double radius;
+        
+            Circle(double radius) {
+                this.radius = radius;
+            }
+        
+            
+            void draw() {
+                System.out.println("Drawing a circle.");
+            }
+        
+            
+            void resize(double scale) {
+                radius *= scale;
+                System.out.println("Resized circle to radius: " + radius);
+            }
+        }
+        
+        public class Shape2DExample {
+            public static void main(String[] args) {
+                Shape2D rectangle = new Rectangle(4, 5);
+                Shape2D circle = new Circle(3);
+        
+                rectangle.draw();
+                rectangle.resize(2);
+        
+                circle.draw();
+                circle.resize(1.5);
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

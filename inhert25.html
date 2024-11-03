@@ -1,0 +1,64 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Bird {
+            abstract void fly();
+            abstract void makeSound();
+        }
+        
+        class Eagle extends Bird {
+            
+            void fly() {
+                System.out.println("Eagle soars high in the sky.");
+            }
+        
+            
+            void makeSound() {
+                System.out.println("Eagle screeches.");
+            }
+        }
+        
+        class Hawk extends Bird {
+            
+            void fly() {
+                System.out.println("Hawk glides gracefully.");
+            }
+        
+            
+            void makeSound() {
+                System.out.println("Hawk shrieks.");
+            }
+        }
+        
+        public class BirdExample {
+            public static void main(String[] args) {
+                Bird eagle = new Eagle();
+                Bird hawk = new Hawk();
+        
+                eagle.fly();
+                eagle.makeSound();
+        
+                hawk.fly();
+                hawk.makeSound();
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

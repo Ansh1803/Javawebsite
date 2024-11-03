@@ -1,0 +1,48 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class employee{
+            void work(){
+            System.out.println("emp is working");
+            }
+             void getsalary(){
+            System.out.println("60000");
+            }}
+            class HR extends employee{
+            void work(){
+            System.out.println("work is done!!");
+            }
+            void addemp(String a){
+            System.out.println("new emp added"+" "+ a);
+            }
+            public static void main(String []s){
+            HR obj= new HR();
+            obj.work();
+            obj.getsalary();
+            obj.addemp("joe");
+            }
+            }
+            
+            
+    </pre> 
+    <h2>Output:</h2> 
+    work is done!!
+    60000
+    new emp added joe
+    
+    </body> 
+</html> 

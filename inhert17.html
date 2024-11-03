@@ -1,0 +1,101 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class BankAccount {
+            protected double balance;
+        
+            public BankAccount() {
+                this.balance = 0.0;
+            }
+        
+            abstract void deposit(double amount);
+            abstract void withdraw(double amount);
+            double getBalance() {
+                return balance;
+            }
+        }
+        
+        class SavingsAccount extends BankAccount {
+        
+            void deposit(double amount) {
+                if (amount > 0) {
+                    balance += amount;
+                    System.out.println("Deposited: $" + amount + " to Savings Account.");
+                } else {
+                    System.out.println("Deposit amount must be positive.");
+                }
+            }
+        
+            
+            void withdraw(double amount) {
+                if (amount > 0 && amount <= balance) {
+                    balance -= amount;
+                    System.out.println("Withdrew: $" + amount + " from Savings Account.");
+                } else {
+                    System.out.println("Insufficient balance or invalid amount.");
+                }
+            }
+        }
+        
+        class CurrentAccount extends BankAccount {
+            @Override
+            void deposit(double amount) {
+                if (amount > 0) {
+                    balance += amount;
+                    System.out.println("Deposited: $" + amount + " to Current Account.");
+                } else {
+                    System.out.println("Deposit amount must be positive.");
+                }
+            }
+        
+            
+            void withdraw(double amount) {
+                if (amount > 0) {
+                    balance -= amount;
+                    System.out.println("Withdrew: $" + amount + " from Current Account.");
+                } else {
+                    System.out.println("Invalid amount.");
+                }
+            }
+        }
+        
+        public class BankAccountExample {
+            public static void main(String[] args) {
+                BankAccount savings = new SavingsAccount();
+                BankAccount current = new CurrentAccount();
+        
+                savings.deposit(500);
+                savings.withdraw(200);
+                System.out.println("Savings Account Balance: $" + savings.getBalance());
+        
+                current.deposit(1000);
+                current.withdraw(1500);
+                System.out.println("Current Account Balance: $" + current.getBalance());
+            }
+        }
+        
+        
+    </pre> 
+    <h2>Output:</h2> Deposited: $500.0 to Savings Account.
+    Withdrew: $200.0 from Savings Account.
+    Savings Account Balance: $300.0
+    Deposited: $1000.0 to Current Account.
+    Withdrew: $1500.0 from Current Account.
+    Current Account Balance: $500.0
+
+    </body> 
+</html> 

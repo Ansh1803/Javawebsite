@@ -1,0 +1,63 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Instrument {
+            abstract void play();
+            abstract void tune();
+        }
+        
+        class Glockenspiel extends Instrument {
+            void play() {
+                System.out.println("Playing the glockenspiel.");
+            }
+        
+            
+            void tune() {
+                System.out.println("Tuning the glockenspiel.");
+            }
+        }
+        
+        class Violin extends Instrument {
+            
+            void play() {
+                System.out.println("Playing the violin.");
+            }
+        
+            
+            void tune() {
+                System.out.println("Tuning the violin.");
+            }
+        }
+        
+        public class InstrumentExample {
+            public static void main(String[] args) {
+                Instrument glockenspiel = new Glockenspiel();
+                Instrument violin = new Violin();
+        
+                glockenspiel.play();
+                glockenspiel.tune();
+        
+                violin.play();
+                violin.tune();
+            }
+        }
+        
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

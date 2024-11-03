@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        class Vehicle {
+            void start() {
+                System.out.println("Vehicle is starting.");
+            }
+        }
+        
+        class Car extends Vehicle {
+            void start() {
+                super.start(); // Call the start method of Vehicle
+                System.out.println("Car is starting.");
+            }
+        }
+        
+        public class SuperFunctionExample {
+            public static void main(String[] args) {
+                Car myCar = new Car();
+                myCar.start();
+            }
+        }
+      
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Vehicle is starting.
+        Car is starting.
+    </body> 
+</html> 

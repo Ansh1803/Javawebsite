@@ -1,0 +1,99 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+        pre { 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        abstract class Employee {
+            String name;
+            String role;
+        
+            Employee(String name, String role) {
+                this.name = name;
+                this.role = role;
+            }
+        
+            abstract double calculateSalary();
+            abstract void displayInfo();
+        }
+        
+        class Manager extends Employee {
+            private double baseSalary;
+            private double bonus;
+        
+            Manager(String name, double baseSalary, double bonus) {
+                super(name, "Manager");
+                this.baseSalary = baseSalary;
+                this.bonus = bonus;
+            }
+        
+            
+            double calculateSalary() {
+                return baseSalary + bonus;
+            }
+        
+            
+            void displayInfo() {
+                System.out.println("Role: " + role);
+                System.out.println("Name: " + name);
+                System.out.println("Total Salary: $" + calculateSalary());
+            }
+        }
+        
+        class Programmer extends Employee {
+            private double hourlyRate;
+            private int hoursWorked;
+        
+            Programmer(String name, double hourlyRate, int hoursWorked) {
+                super(name, "Programmer");
+                this.hourlyRate = hourlyRate;
+                this.hoursWorked = hoursWorked;
+            }
+        
+            
+            double calculateSalary() {
+                return hourlyRate * hoursWorked;
+            }
+        
+            
+            void displayInfo() {
+                System.out.println("Role: " + role);
+                System.out.println("Name: " + name);
+                System.out.println("Total Salary: $" + calculateSalary());
+            }
+        }
+        
+        public class EmployeeExample {
+            public static void main(String[] args) {
+                Employee manager = new Manager("Alice", 80000, 10000);
+                Employee programmer = new Programmer("Bob", 50, 160);
+        
+                manager.displayInfo();
+                System.out.println();
+                programmer.displayInfo();
+            }
+        }
+        
+        
+    </pre> 
+    <h2>Output:</h2> 
+    Role: Manager
+    Name: Alice
+    Total Salary: $90000.0
+    
+    Role: Programmer
+    Name: Bob
+    Total Salary: $8000.0
+    </body> 
+</html> 
