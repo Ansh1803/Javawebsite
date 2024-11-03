@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class CGPACalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double totalPoints = 0;
+        System.out.println("Enter CGPA for 5 subjects:");
+        for (int i = 0; i < 5; i++) {
+            totalPoints += scanner.nextDouble();
+        }
+        double cgpa = totalPoints / 5;
+        double percentage = cgpa * 9.5;
+        System.out.println("CGPA: " + cgpa + ", Percentage: " + percentage);
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

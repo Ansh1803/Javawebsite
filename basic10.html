@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class sx{
+            public static void main(String[] args) {
+                
+                int number = 1234;
+        
+                
+                int sum = sumOfDigits(number);
+        
+                
+                System.out.println("The sum of the digits of " + number + " is: " + sum);
+            }
+        
+            public static int sumOfDigits(int number) {
+                
+                number = Math.abs(number);
+        
+              
+                if (number == 0) {
+                    return 0;
+                }
+        
+                // Recursive case: last digit + sum of the remaining digits
+                return (number % 10) + sumOfDigits(number / 10);
+            }
+        }
+    </pre>
+
+<img src="basic10.png" alt="">
+</body>
+</html>

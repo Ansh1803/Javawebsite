@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.util.Scanner;
+
+public class CompoundInterest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter principal, rate and time:");
+        double principal = scanner.nextDouble();
+        double rate = scanner.nextDouble();
+        double time = scanner.nextDouble();
+        double amount = principal * Math.pow((1 + rate / 100), time);
+        double compoundInterest = amount - principal;
+        System.out.println("Compound Interest: " + compoundInterest);
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+
+    </body> 
+</html> 

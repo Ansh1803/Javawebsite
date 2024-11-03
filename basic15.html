@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DisplaySystemTime {
+    public static void main(String[] args) {
+        Date now = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String formattedTime = sdf.format(now);
+        System.out.println("Current System Time: " + formattedTime);
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+    Current System Time: 2024-11-03 06:04:00
+    </body> 
+</html> 

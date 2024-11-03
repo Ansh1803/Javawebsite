@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class SumOfPrimes {
+    public static void main(String[] args) {
+        int count = 0, num = 2, sum = 0;
+        while (count < 100) {
+            boolean isPrime = true;
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                sum += num;
+                count++;
+            }
+            num++;
+        }
+        System.out.println("Sum of the first 100 prime numbers: " + sum);
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+ECHO is off.
+ECHO is off.
+    </body> 
+</html> 

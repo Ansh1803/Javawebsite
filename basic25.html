@@ -1,0 +1,34 @@
+<!DOCTYPE html>  
+<html> 
+<head> 
+    <title>Function Example</title> 
+    <style> 
+        body { 
+            background-color: black; 
+            color: white; 
+            font-family: Arial, sans-serif; 
+        } 
+            white-space: pre-wrap; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <pre> 
+        public class AddWithoutOperators {
+    public static void main(String[] args) {
+        int a = 5, b = 7;
+        while (b != 0) {
+            int carry = a & b;
+            a = a ^ b;
+            b = carry << 1;
+        }
+        System.out.println("Sum: " + a);
+    }
+}
+
+    </pre> 
+    <h2>Output:</h2> 
+ECHO is off.
+ECHO is off.
+    </body> 
+</html> 

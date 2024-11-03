@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Function Example</title>
+    <style>
+        body {
+            background-color: black; /* Background color */
+            color: white; /* Text color */
+            font-family: Arial, sans-serif; /* Font family */
+        }
+        pre {
+            white-space: pre-wrap; /* Ensures line breaks are preserved */
+        }
+    </style>
+</head>
+<body>
+    <pre>
+        class r1 {
+            public static void main(String[] args) {
+                
+                String binaryNumber = "1011"; 
+        
+               
+                int decimalValue = binaryToDecimal(binaryNumber);
+        
+                
+                System.out.println("The decimal value of binary " + binaryNumber + " is: " + decimalValue);
+            }
+        
+            public static int binaryToDecimal(String binary) {
+                int decimal = 0;
+        
+               
+                for (int i = 0; i < binary.length(); i++) {
+                    char bit = binary.charAt(binary.length() - 1 - i);
+                    if (bit == '1') {
+                        decimal += Math.pow(2, i);
+                    }
+                }
+        
+                return decimal;
+            }
+        }
+    </pre>
+    <img src="basic8.png" alt="">
+</body>
+</html>
