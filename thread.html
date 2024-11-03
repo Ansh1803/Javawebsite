@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>threads</title>
+    <link rel="stylesheet" href="css2.css">
+    <link rel="stylesheet" href="secondcss.css">
+    
+</head>
+<body bgcolor="black">
+    <header>
+      
+        
+        <h1></h1>
+        <h1><a href="index.html" class="no-underline">TOPICS OF JAVA</a></h1>
+
+        <style>
+            .container {
+              display: grid;
+              grid-template-rows: 100%;
+              grid-template-columns: 20% 80%;
+              height: 83vh;
+              
+              
+              background-color:rgb(54, 54, 54));
+               
+        
+            }
+            ::-webkit-scrollbar {
+border-radius: 1%;
+background: rgb(54, 54, 54);
+            }
+            
+        
+            .left {
+              background-color:;
+              padding: 10px;
+              overflow: scroll;             
+            }
+        
+            .right {
+              background-image: url("");
+              background-color:rgb(54, 54, 54);
+              color:white;
+              padding:10px;
+              border-radius: ;
+              overflow: scroll;
+              
+            }
+        
+            .button {
+              display: block;
+              font:'Poppins', sans-serif;
+              width: 80%;
+              margin: 10px auto;
+              padding: 10px;
+              border: none;
+              border-radius: 10px;
+              color: white;
+              font-size: 15px;
+
+              cursor: pointer;
+              background-color:rgb(54, 54, 54);
+              
+            }
+            #iframe-container {
+            width: 100%;
+            margin: 20px auto;
+            
+            background-color: white;
+        }
+        
+          
+        
+            
+            nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+   
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: none;
+}
+header {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    border-bottom-right-radius:10px ;
+    border-bottom-left-radius: 10px;
+}
+          </style>
+       
+       <nav>
+        <ul>
+          <li><a href="basic.html">Basic</a></li>
+          <li><a href="function.html">Function</a></li>
+          <li><a href="interface.html">Interface</a></li>
+          <li><a href="package.html">Package</a></li>
+          <li><a href="opps.html">Oops</a></li>
+          <li><a href="String.html">String</a></li>
+          <li><a href="inheritance.html">Inheritance</a></li>
+          <li><a href="ex.html">Exception</a></li>
+          <li><a href="1d.html">1D array</a></li>
+          <li><a href="awt.html">Graphical User Interface</a></li>
+          <li><a href="jdbc.html">Java database connection</a></li>  
+          <li><a href="2d.html">2D Array</a></li>
+          <li><a href="in.html">Input/Output</a></li>
+          <li><a href="thread.html">Multi-Threading</a></li>
+          <li><a href="model.html">Delegation Event Model</a></li>
+          <li><a href="applets.html">Applets</a></li>  s
+            </ul>
+    </nav>
+    </header>
+    
+    
+    <div class="container">
+      <div class="left">
+          <h1 style="color: hsl(0, 0%, 99%)">Questions</h1>
+        <button class="button" onclick="loadProgram('mu1.html')">1. Write a Java program to create a basic Java thread that prints "Hello, World!" when executed.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu2.html')">2. Write a Java program that creates two threads to find and print even and odd numbers from 1 to 20.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu3.html')">3. Write a Java program that sorts an array of integers using multiple threads.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu4.html')">4. Write a Java program that performs matrix multiplication using multiple threads.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu5.html')">5. Write a Java program that calculates the sum of all prime numbers up to a given limit using multiple threads.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu6.html')">6. Write a Java program to implement a concurrent web crawler that crawls multiple websites simultaneously using threads.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu7.html')">7. Write a Java program that creates a bank account with concurrent deposits and withdrawals using threads.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu8.html')">8. Create the program to create multiple threads by using Runnbale interface
+
+        </button>
+        <button class="button" onclick="loadProgram('mu9.html')">9. Create the program to create multiple threads by using Thread class
+
+        </button>
+        <button class="button" onclick="loadProgram('mu10.html')">10. Create the program to create multiple threads, set its name and its priority.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu11.html')">11. Create the program to create multiple threads, show an example of synchronization keyword.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu12.html')">12. Create the program to create multiple threads, show an example of notify, notifyall, wait, resume, sleep methods.
+
+        </button>
+        <button class="button" onclick="loadProgram('mu13.html')">13. Create the program to create multiple threads, show an example of join and yield methods.
+
+        </button>
+
+      
+        
+      </div>
+ 
+      
+        
+        <div class="right">
+          
+          <h1 style="color: hsl(0, 0%, 99%);;">Programs for JAVA</h1>
+          <div class=".container">
+          
+    
+            <iframe id="program-frame" width="100%" height="800" src="program0.c" ></iframe>
+      
+
+          </div>
+        </div>
+      </div></div> 
+                </div>
+      </div>
+      <script>
+        function loadProgram(programName) {
+            document.getElementById('program-frame').src = programName;
+        }
+    </script>
+
+</body>
+</html>
